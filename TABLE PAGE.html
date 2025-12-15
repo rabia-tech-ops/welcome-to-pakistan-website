@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tourist Destinations - Pakistan</title>
+<link rel="stylesheet" href="TABLE PAGE STYLE.css">
+</head>
+<body>
+    <h1>Popular Tourist Destinations in Pakistan</h1>
+
+    <table id="tourTable">
+        <!--TABLE HEADINGS-->
+        <tr>
+            <th onclick="sortTable(0)">Destination</th>
+            <th onclick="sortTable(1)">Location</th>
+            <th onclick="sortTable(2)">Entry Fee (in PKR)</th>
+            <th onclick="sortTable(3)">Visiting Hours</th>
+        </tr>
+        <!--DESTINATIONS ACROSS PAKISTAN-->
+        <tr>
+            <td>Badshahi Mosque</td>
+            <td>Lahore</td>
+            <td>0</td>
+            <td>9:00 AM - 6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Shah Faisal Mosque</td>
+            <td>Islamabad</td>
+            <td>0</td>
+            <td>8:00 AM - 5:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Hunza Valley</td>
+            <td>Gilgit Baltistan</td>
+            <td>1000</td>
+            <td>Open for 24 Hours</td>
+        </tr>
+
+        <tr>
+            <td>Faislabad Clock Tower</td>
+            <td>Faisalabad</td>
+            <td>0</td>
+            <td>All Day</td>
+        </tr>
+
+        <tr>
+            <td>Karimabad Fort</td>
+            <td>Hunza</td>
+            <td>100</td>
+            <td>9:00 AM - 5:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Masoom Shah Jo Minaro</td>
+            <td>Sukkur</td>
+            <td>200</td>
+            <td>10:00 AM - 6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Boat Ride at Indus River</td>
+            <td>Sukkur</td>
+            <td>500</td>
+            <td>8:00 AM - 5:00 PM</td>
+        </tr>
+
+        <tr>
+           <td>Mohen-Jo-Daro</td> 
+           <td>Larkana</td>
+           <td>200</td>
+           <td>10:00 AM - 10:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Joyland</td>
+            <td>Rawalpindi</td>
+            <td>100</td>
+            <td>11:00 AM - 11:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Dino-Valley</td>
+            <td>Margalla Hills</td>
+            <td>1000</td>
+            <td>10:00 AM - 1:00 AM</td>
+        </tr>
+
+        <tr>
+            <td>Gaming Zone</td>
+            <td>Islamabad, G-11</td>
+            <td>700</td>
+            <td>10:00 AM - 11:00 PM</td>
+        </tr>
+        
+        <tr>
+            <td>Skardu & Shangrilla Resort</td>
+            <td>Gilgit Baltistan</td>
+            <td>500</td>
+            <td>Daylight Hours</td>
+        </tr>
+
+        <tr>
+            <td>Shalimar Gardens</td>
+            <td>Lahore</td>
+            <td>50</td>
+            <td>9:00 AM - 5:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Sukkur Barrage</td>
+            <td>Sukkur</td>
+            <td>0</td>
+            <td>Open for 24 hours</td>
+        </tr>
+
+        <tr>
+            <td>Lansdown Bridge</td>
+            <td>Sukkur</td>
+            <td>0</td>
+            <td>Open for 24 hours</td>
+        </tr>
+
+        <tr>
+            <td>Sateen Jo Astaan</td>
+            <td>Sukkur</td>
+            <td>100</td>
+            <td>8:00 AM - 4:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Sadhu Belo</td>
+            <td>Sukkur</td>
+            <td>100</td>
+            <td>5:00 AM - 5:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Pakistan Maritime Museum</td>
+            <td>Karachi</td>
+            <td>100</td>
+            <td>8:30 AM - 10:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Safari Park</td>
+            <td>Karachi</td>
+            <td>100</td>
+            <td>8:00 AM - 10:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Karachi Zoo</td>
+            <td>Karachi</td>
+            <td>100</td>
+            <td>8:30 AM - 5:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Hawksbay & Sandspit Beaches</td>
+            <td>Karachi</td>
+            <td>0</td>
+            <td>Daylight hours</td>
+        </tr>
+    </table>
+
+    <!--SCRIPTING-->
+
+<script>
+function sortTable(col) {
+    let table = document.getElementById("tourTable");
+    let rows = Array.from(table.rows).slice(1);
+    let asc = table.asc = !table.asc;
+
+    rows.sort((a, b) => {
+        let x = a.cells[col].innerText.toLowerCase();
+        let y = b.cells[col].innerText.toLowerCase();
+        return asc ? x.localeCompare(y) : y.localeCompare(x);
+    });
+
+    rows.forEach(row => table.appendChild(row));
+}
+</script>
+</body>
+</html>
