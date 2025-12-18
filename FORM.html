@@ -288,5 +288,72 @@
       </div>
         </div>
     </div>
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Form submission
+    const form = document.getElementById('TRAVELER-FORM');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMessage = document.getElementById('SuccessMessage');
+    const backBtn = document.getElementById('backBtn');
+    
+    // Submit button click
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get required fields
+            const name = document.getElementById('Name').value;
+            const email = document.getElementById('email').value;
+            const city = document.getElementById('CITY').value;
+            const destination = document.getElementById('DESTINATION').value;
+            const travelType = document.querySelector('input[name="TravelType"]:checked');
+            
+            // Simple validation
+            if (!name || !email || !city || !destination || !travelType) {
+                alert('Please fill in all required fields!');
+                return;
+            }
+            
+            // Show success message
+            if (form && successMessage) {
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+            }
+        });
+    }
+    
+    // Back button
+    if (backBtn) {
+        backBtn.addEventListener('click', function() {
+            if (form && successMessage) {
+                successMessage.style.display = 'none';
+                form.style.display = 'block';
+                form.reset();
+            }
+        });
+    }
+    
+    // Character counter
+    const messageBox = document.getElementById('message');
+    const charCounter = document.getElementById('charCount');
+    
+    if (messageBox && charCounter) {
+        messageBox.addEventListener('input', function() {
+            charCounter.textContent = this.value.length;
+        });
+    }
+    
+    // Make radio buttons look selected when clicked
+    const radioButtons = document.querySelectorAll('.RADIO-OPTION');
+    radioButtons.forEach(radio => {
+        radio.addEventListener('click', function() {
+            radioButtons.forEach(r => r.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+    });
+});
+</script>
 </body>
+
 </html>
