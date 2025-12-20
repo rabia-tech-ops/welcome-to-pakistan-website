@@ -135,6 +135,52 @@ body {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
+.Nav-Bar {
+    background: #2c3e50;
+    color: white;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.Nav-Container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Nav-Links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-betweem;
+}
+
+.Nav-Links li{
+    flex: 1;
+    text-align: center;
+}
+
+.Nav-Links a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3 ease;
+    border-bottom: 3px solid transparent;
+}
+    
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
