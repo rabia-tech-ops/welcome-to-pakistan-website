@@ -234,6 +234,61 @@
     </div>
         <script>
 document.addEventListener('DOMContentLoaded', function() {
+
+    //Now we will map city values to the destinations 
+    const CITY_TO_DESTINATIONS = {
+        
+        //Places to Visit in Lahore
+        "Lahore":[
+            "🕌 Badshahi Mosque (Free Entry)",
+            "🌳 Shalimar Gardens (50 PKR)",
+            "🏰 Lahore Fort (Free Entry)",
+            "🏞️ Minar-e-Pakistan (Free Entry)",
+            "🎨 Lahore Museum (50 PKR)",
+            "🏰 Sheesh Mahal (Free Entry)"
+            ],
+
+        //Places to Visit in Islamabad
+        "Islamabad":[
+            "🕌 Shah Faisal Mosque (Free Entry)",
+            "🦖 Dino-Valley, Margalla Hills (1000 PKR)",
+            "🎮 Gaming Zone, G-11 (700 PKR)",
+            "🌳 Fatima Jinnah Park (Free Entry)",
+            "🏞️ Lok Virsa Museum (100 PKR)"
+            ],
+
+        //Places to Visit in Karachi
+        "Karachi":[
+            "🚢 Maritime Museum (100 PKR)",
+            "🐘 Safari Park (100 PKR)",
+            "🦁 Karachi Zoo (100 PKR)",
+            "🏖️ Hawksbay & Sandspit (Free)",
+            "🏖️ Clifton Beach (Free)",
+            "🏰 Mohatta Palace Museum (100 PKR)"
+            ],
+
+        //Places to Visit in Sukkur
+        "Sukkur": [
+            "🌉 Sukkur Barrage (Free)",
+            "🌉 Lansdown Bridge (Free)",
+            "🕌 Masoom Shah Jo Minaro (200 PKR)",
+            "🕌 Sateen Jo Astaan (100 PKR)",
+            "🛕 Sadhu Belo (100 PKR)",
+            "🚤 Boat Ride (500 PKR)"
+            ],
+
+        //Places to Visit in Gilgit Baltistan 
+        "Gilgit Baltistan": [
+            "🏔️ Hunza Valley (1000 PKR)",
+            "🏞️ Skardu & Shangrilla (500 PKR)",
+            "🏰 Karimabad Fort (100 PKR)",
+            "🏔️ Naltar Valley (Free Entry)",
+            "🌊 Attabad Lake (Free Entry)",
+            "🏔️ Passu Cones (Free Entry)"
+            ],
+
+
+        
     
     // Form submission
     const form = document.getElementById('TRAVELER-FORM');
@@ -301,6 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 
 </html>
+
 
 
 
