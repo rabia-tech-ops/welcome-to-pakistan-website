@@ -180,6 +180,17 @@ body {
     transition: all 0.3 ease;
     border-bottom: 3px solid transparent;
 }
+
+.Nav-Links a:hover{
+    background: #34495e;
+    border-bottom: 3px solid #3498db;
+}
+
+.Nav-Links a.active {
+    background: #1a252f;
+    border-bottom: 3px solid #e74c3c;
+    font-weight: bold;
+}
     
 
 /* ===== RESPONSIVE ===== */
