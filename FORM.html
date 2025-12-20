@@ -346,6 +346,32 @@ document.addEventListener('DOMContentLoaded', function() {
         opt.textContent = label; //Sets Visible text inside the Dropdown Menu 
         return opt; //returns option element so it can be appended to <select>
     }
+
+    //Now we will create a function that will filter the destinaions when the city changes
+    function filterDestinations() {
+        //City Value is the one telling the Function to tell Which City's Destinations will be shown 
+        const cityValue = document.getElementById('CITY').value; //Reads which city is selected 
+        const destSelect = document.getElementById('DESTINATION'); //Selects the City Destination according to the Selected City
+
+        destSelect.innerHTML = ''; //This Helps in clearing up the older options
+        destSelect.appendChild(makeOption('🗺️ Select a Destination')); //This adds a new PlaceHolder
+
+        //This is for the time if no city is selected, It actually keeps the Destinations button disable if no city is selected yet 
+        if(!cityValue){
+            destSelect.disabled = true;
+            return;
+        }
+
+        //This line looks up for the Destination List for Selected City Option 
+        const list = CITY_TO_DESTINATIONS[cityValue] || [];
+
+        //This line of code helps the user in giving them a list of the Number of Destinations that City has 
+        //Works Like an Array
+        list.forEach(label => destSelect.appendChild(MakeOption(label)));
+
+        //If no city is Selected, There will be no Value in the Destination List 
+        destSelect.disabled = list.length === 0;
+    }
  
     // Form submission
     const form = document.getElementById('TRAVELER-FORM');
@@ -413,6 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 
 </html>
+
 
 
 
