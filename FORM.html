@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //Now we will map city values to the destinations 
     const CITY_TO_DESTINATIONS = {
         
-        //Places to Visit in Lahore
+        //Six Places to Visit in Lahore
         "Lahore":[
             "🕌 Badshahi Mosque (Free Entry)",
             "🌳 Shalimar Gardens (50 PKR)",
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "🏰 Sheesh Mahal (Free Entry)"
             ],
 
-        //Places to Visit in Islamabad
+        //Six Places to Visit in Islamabad
         "Islamabad":[
             "🕌 Shah Faisal Mosque (Free Entry)",
             "🦖 Dino-Valley, Margalla Hills (1000 PKR)",
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "🏞️ Lok Virsa Museum (100 PKR)"
             ],
 
-        //Places to Visit in Karachi
+        //Six Places to Visit in Karachi
         "Karachi":[
             "🚢 Maritime Museum (100 PKR)",
             "🐘 Safari Park (100 PKR)",
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "🏰 Mohatta Palace Museum (100 PKR)"
             ],
 
-        //Places to Visit in Sukkur
+        //Six Places to Visit in Sukkur
         "Sukkur": [
             "🌉 Sukkur Barrage (Free)",
             "🌉 Lansdown Bridge (Free)",
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "🚤 Boat Ride (500 PKR)"
             ],
 
-        //Places to Visit in Gilgit Baltistan 
+        //Six Places to Visit in Gilgit Baltistan 
         "Gilgit Baltistan": [
             "🏔️ Hunza Valley (1000 PKR)",
             "🏞️ Skardu & Shangrilla (500 PKR)",
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "🏔️ Passu Cones (Free Entry)"
             ],
 
-        //Places to Visit in Faisalabad
+        //Six Places to Visit in Faisalabad
         "Faisalabad": [
             "⏰ Faisalabad Clock Tower (Free)",
             "🏛️ Lyallpur Museum (50 PKR)",
@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "🏢 Chenab Club (Members Only)"
             ],
 
-        //Places to Visit in Rawalpindi
+        //Six Places to Visit in Rawalpindi
         "Rawalpindi": [
             "🎡 Joyland (100 PKR)",
             "🌳 Ayub National Park (Free Entry)",
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "🍴 Saddar Food Street (Free Entry)"
             ],
 
-        //Places to Visit in Larkana
+        //Six Places to Visit in Larkana
         "Larkana": [
             "🏛️ Mohen-Jo-Daro (200 PKR)",
             "🏛️ Shah Baharo Tomb (Free Entry)",
@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "🏰 Garhi Khuda Bakhsh (Free Entry)"
             ],
 
-        //Places to Visit in Hunza
+        //Six Places to Visit in Hunza
         "Hunza": [
             "🏰 Karimabad Fort (100 PKR)",
             "🏔️ Hunza Valley (1000 PKR)",
@@ -337,6 +337,15 @@ document.addEventListener('DOMContentLoaded', function() {
             "🌄 Daman-e-Koh Viewpoint (Free Entry)"
             ]
 };
+
+    /*Now we are creating a helper
+    which will help create an option for destinations*/
+    function MakeOption(label){
+        const opt = document.createElement('option'); //It will create a new option element
+        opt.value = label; //Sets the Value Attribute
+        opt.textContent = label; //Sets Visible text inside the Dropdown Menu 
+        return opt; //returns option element so it can be appended to <select>
+    }
  
     // Form submission
     const form = document.getElementById('TRAVELER-FORM');
@@ -404,6 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 
 </html>
+
 
 
 
