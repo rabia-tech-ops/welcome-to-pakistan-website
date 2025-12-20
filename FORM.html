@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /*Now we are creating a helper
     which will help create an option for destinations*/
-    function MakeOption(label){
+    function makeOption(label){
         const opt = document.createElement('option'); //It will create a new option element
         opt.value = label; //Sets the Value Attribute
         opt.textContent = label; //Sets Visible text inside the Dropdown Menu 
@@ -367,11 +367,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //This line of code helps the user in giving them a list of the Number of Destinations that City has 
         //Works Like an Array
-        list.forEach(label => destSelect.appendChild(MakeOption(label)));
+        list.forEach(label => destSelect.appendChild(makeOption(label)));
 
         //If no city is Selected, There will be no Value in the Destination List 
         destSelect.disabled = list.length === 0;
     }
+    //This initializes the Funcion filterDestinations when the page loads
+    document.getElementById('CITY').addEventListener('change', filterDestinations);
+    filterDestinations();
  
     // Form submission
     const form = document.getElementById('TRAVELER-FORM');
@@ -439,6 +442,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 
 </html>
+
 
 
 
