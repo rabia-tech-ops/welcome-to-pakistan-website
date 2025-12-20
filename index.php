@@ -146,7 +146,7 @@
 
     <!-- SIMPLE FOOTER -->
     <footer class="SIMPLE-FOOTER">
-        <p>© 2024 Pakistan Explorer | Created by: Khadija Alvi, Rabia Ozair, Abeera Amjad</p>
+        <p>© <?php echo date('Y') Pakistan Explorer | Created by: Khadija Alvi, Rabia Ozair, Abeera Amjad</p>
         <p>Karachi, Pakistan | info@pakistanexplorer.com</p>
         <a href="Links.html">Quick Links</a>
     </footer>
@@ -160,6 +160,7 @@
     </script>
 </body>
 </html>
+
 
 
 
