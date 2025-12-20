@@ -191,6 +191,21 @@ body {
     border-bottom: 3px solid #e74c3c;
     font-weight: bold;
 }
+
+.Nav-Links a i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.Mobile-Menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+    
     
 
 /* ===== RESPONSIVE ===== */
